@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS tarot_db;
+CREATE DATABASE tarot_db;
+
+

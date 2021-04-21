@@ -1,0 +1,251 @@
+body {
+  font-family: "Macondo", cursive;
+  background-image: url(../assets/img/background1.jpg);
+  background-size: cover;
+}
+
+.header {
+  margin-bottom: 75px;
+  color: white;
+}
+
+.cardImg {
+  width: 200px;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-bottom: 20px;
+  background: transparent;
+  color: white;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+.saveBtn {
+  width: 500px;
+  height: 60px;
+  font-size: 40px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+.landingDiv {
+  margin-top: 300px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.landingBtn {
+  text-align: center;
+}
+
+.landingH1 {
+  color: white;
+}
+
+.btnRow {
+  margin-bottom: 30px;
+}
+
+.savedReadingsH1 {
+  color: white;
+}
+
+.savedReadingsDiv {
+  margin-top: 100px;
+}
+
+.savedReadingResult {
+  color: black;
+  height: 50px;
+  width: 30%;
+  margin-bottom: 30px;
+  font-size: 30px;
+  /* border: none;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+   */
+}
+
+.savedResultsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: solid blue 1px;
+  outline: none;
+  color: rgb(78, 167, 250);;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.loginForm {
+  display: flex;
+  justify-content: start;
+}
+
+.form_label {
+  color: white;
+}
+
+.signupForm {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.form_Div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+::-webkit-input-placeholder {
+  color: darkgrey;
+  font-weight: 600;
+}
+
+input {
+  border: rgb(78, 167, 250) solid 3px;
+}
+
+.instructions {
+  /* width: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(78, 167, 250);
+  margin-bottom: 20px;
+}
+
+.col-sm-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cardReadings {
+  color: white;
+  font-size: 20px;
+}
+
+.readingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percentage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardName {
+  font-size: 30px;
+}
+
+.cardH2 {
+  color: rgb(78, 167, 250);
+  font-size: 50px;
+}
+
+.titleH1 {
+  color: rgb(78, 167, 250);
+}
