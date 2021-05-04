@@ -79,7 +79,4 @@ console.log(tarot.drawReading());
     reversed: false } ]
 */
 
-
-
-
 module.exports = tarot;
