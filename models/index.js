@@ -1,5 +1,3 @@
-/* eslint-disable no-var */
-/* eslint-disable vars-on-top */
 "use strict";
 
 const fs = require("fs");
@@ -22,17 +20,17 @@ if (config.use_env_variable) {
 }
 
 fs.readdirSync(__dirname)
-  .filter(file => {
+  .filter((file) => {
     return (
       file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
     );
   })
-  .forEach(file => {
+  .forEach((file) => {
     const model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(modelName => {
+Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }

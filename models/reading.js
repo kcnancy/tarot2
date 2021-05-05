@@ -1,5 +1,3 @@
-const user = require('../models/user')
-
 module.exports = (sequelize, DataTypes) => {
   const Reading = sequelize.define("Reading", {
     title: {

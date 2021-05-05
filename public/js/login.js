@@ -1,16 +1,15 @@
 // Getting references to our form and inputs
-var loginForm = document.getElementById("form-login");
-var emailInput = document.getElementById("emailInput");
-var passwordInput = document.getElementById("passwordInput");
+const loginForm = document.getElementById("form-login");
+const emailInput = document.getElementById("emailInput");
+const passwordInput = document.getElementById("passwordInput");
 
 // When the form is submitted, we validate there's an email and password entered
-loginForm.addEventListener("click", (e) => {
+loginForm.addEventListener("click", e => {
   e.preventDefault();
   const userData = {
     email: emailInput.value,
-    password: passwordInput.value,
+    password: passwordInput.value
   };
-
 
   if (!userData.email || !userData.password) {
     return;
@@ -25,9 +24,9 @@ loginForm.addEventListener("click", (e) => {
 // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
 function loginUser(email, password) {
   fetch("/api/login", {
-    method: 'POST',
+    method: "POST",
     email: email,
-    password: password,
+    password: password
   })
     .then(data => {
       console.log(data);

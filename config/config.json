@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Jesse2020!",
-    "database": "Tarot_db",
+    "password": "Time4change$",
+    "database": "tarot_db",
     "host": 3306,
     "dialect": "mysql"
   },

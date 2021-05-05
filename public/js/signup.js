@@ -1,20 +1,16 @@
-
-
-var signUpBtn = document.getElementById("signUpBtn");
-var emailInput = document.getElementById("signUpEmail");
-var passwordInput = document.getElementById("signUpPassword");
-
-
+const signUpBtn = document.getElementById("signUpBtn");
+const emailInput = document.getElementById("signUpEmail");
+const passwordInput = document.getElementById("signUpPassword");
 
 // When the signup button is clicked, we validate the email and password are not blank
-signUpBtn.addEventListener("click", function(e) {
+signUpBtn.addEventListener("click", e => {
   e.preventDefault();
   const userData = {
     email: emailInput.value,
-    Password: passwordInput.value,
+    Password: passwordInput.value
   };
 
-  console.log(userData)
+  console.log(userData);
 
   // if (!userData.email || !userData.Password) {
   //   return;
@@ -22,19 +18,19 @@ signUpBtn.addEventListener("click", function(e) {
   // emailInput.val("");
   // passwordInput.val("");
 
-  fetch("/api/user", {
+  fetch("/api/signup", {
     method: "POST",
     body: JSON.stringify(userData),
     headers: {
       Accept: "application/json",
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   })
-    .then((response) => response.json())
-    .then((data) => {
+    .then(response => response.json())
+    .then(data => {
       console.log(data);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 });
