@@ -1,6 +1,5 @@
-// Requiring our models and passport as we've configured it
-const db = require("../models");
 const passport = require("../config/passport");
+const db = require("config/_helpers/db");
 //const router = require("express").Router();
 
 module.exports = function(app) {
@@ -24,7 +23,7 @@ module.exports = function(app) {
       Password: req.body.password
     })
       .then(() => {
-        res.redirect(307, "/api/login");
+        res.redirect(307, "./api/login");
         console.log(user);
       })
       .catch(err => {
