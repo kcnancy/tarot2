@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const myReading = document.getElementById("myReading");
 const pastCardName = document.getElementById("cardName1");
 const pastCardImg = document.getElementById("img-1");
